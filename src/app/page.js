@@ -1,11 +1,10 @@
 import Image from "next/image";
 import bg from "../../public/background/home-background.png";
 import RenderModel from "@/components/RenderModel";
-// import Wizard from "@/components/models/Wizard";
 import Navigation from "@/components/navigation";
 
 import dynamic from "next/dynamic";
-const Wizard = dynamic(() => import("@/components/models/Wizard"), {
+const Queen = dynamic(() => import("@/components/models/Queen"), {
   ssr: false,
 });
 
@@ -18,13 +17,13 @@ export default function Home() {
         src={bg}
         alt="background-image"
         fill
-        className="-z-50 w-full h-full object-cover object-center opacity-50"
+        className="-z-50 w-full h-full object-cover object-center opacity-75"
       />
 
       <div className="w-full h-screen">
         <Navigation />
         <RenderModel>
-          <Wizard />
+          <Queen />
         </RenderModel>
       </div>
     </main>
