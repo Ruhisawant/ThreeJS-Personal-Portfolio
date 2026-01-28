@@ -34,6 +34,7 @@ export default function About() {
       </div>
 
       <AboutDetails />
+      {/* add bottom arrow to go to next section */}
     </>
   );
 }
